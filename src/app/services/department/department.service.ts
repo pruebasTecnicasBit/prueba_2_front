@@ -8,12 +8,12 @@ import { Department } from '../../models/department.model';
   providedIn: 'root',
 })
 export class DepartmentService {
-  private readonly apiUrl = 'http://localhost:5000/departamentos';
+  private readonly apiUrl = 'http://localhost:3000/departament';
 
   private http = inject(HttpClient);
 
   getDepartments(): Observable<Department[]> {
-    return this.http.get<Department[]>(this.apiUrl);
+    return this.http.get<Department[]>(`${this.apiUrl}/get-all-departaments`);
   }
 
   getDepartmentByCode(codigo: number): Observable<Department> {
@@ -21,14 +21,14 @@ export class DepartmentService {
   }
 
   createDepartment(department: Department): Observable<Department> {
-    return this.http.post<Department>(this.apiUrl, department);
+    return this.http.post<Department>(`${this.apiUrl}/create-departaments`, department);
   }
 
   updateDepartment(codigo: number, department: Partial<Department>): Observable<Department> {
-    return this.http.put<Department>(`${this.apiUrl}/${codigo}`, department);
+    return this.http.put<Department>(`${this.apiUrl}/update-departaments/${codigo}`, department);
   }
 
   deleteDepartment(codigo: number): Observable<{ message: string; departamento: Department }> {
-    return this.http.delete<{ message: string; departamento: Department }>(`${this.apiUrl}/${codigo}`);
+    return this.http.delete<{ message: string; departamento: Department }>(`${this.apiUrl}/delete-departament/${codigo}`);
   }
 }
