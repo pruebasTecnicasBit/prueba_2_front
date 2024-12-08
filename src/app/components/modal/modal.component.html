@@ -9,7 +9,7 @@
           <label class="block text-sm font-medium text-gray-700">Código</label>
           <input
             type="number"
-            [(ngModel)]="department.codigo"
+            [(ngModel)]="department.departamentCode"
             name="departmentCodigo"
             class="w-full px-3 py-2 border rounded"
           />
@@ -18,7 +18,7 @@
           <label class="block text-sm font-medium text-gray-700">Nombre</label>
           <input
             type="text"
-            [(ngModel)]="department.nombre"
+            [(ngModel)]="department.name"
             name="departmentNombre"
             class="w-full px-3 py-2 border rounded"
           />
@@ -71,7 +71,7 @@
         <div class="mb-4">
           <label class="block text-sm font-medium text-gray-700">Código Departamento</label>
           <input
-            type="number"
+            type="string"
             [(ngModel)]="employee.codigo_departamento"
             name="employeeCodigoDepartamento"
             class="w-full px-3 py-2 border rounded"

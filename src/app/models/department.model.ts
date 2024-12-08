@@ -1,5 +1,5 @@
 export interface Department {
   departamentCode: number;
-    name: string;
-  }
+  name: string;
+}
   
