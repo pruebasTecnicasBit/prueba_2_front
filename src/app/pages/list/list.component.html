@@ -32,18 +32,10 @@
   
     <div>
       <app-department *ngIf="view === 'departments'"></app-department>
-      <div *ngIf="view === 'employees'" class="bg-white shadow-md rounded-lg p-4">
-        <h2 class="text-lg font-semibold mb-4 text-green-600">Empleados</h2>
-        <ul class="divide-y divide-gray-200">
-          <li
-            *ngFor="let employee of employees"
-            class="px-4 py-3 flex justify-between items-center hover:bg-gray-50 transition"
-          >
-            <span class="font-medium text-gray-800">{{ employee.id }}</span>
-            <span class="text-gray-600">{{ employee.name }} - {{ employee.position }}</span>
-          </li>
-        </ul>
-      </div>
+      <app-employee *ngIf="view === 'employees'" ></app-employee>
+
+        
+      
     </div>
   
     <app-modal

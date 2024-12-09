@@ -48,11 +48,11 @@ export class ModalComponent {
 
   department: Department = { departamentCode: 0, name: '' };
   employee: Employee = {
-    codigo: 0,
-    nombre: '',
-    apellido1: '',
-    apellido2: '',
-    codigo_departamento: '',
+    code: 0,
+    name: '',
+    lastname1: '',
+    lastname2: '',
+    departamentCode: '',
   };
 
   constructor(private departmentService: DepartmentService, private employeeService: EmployeeService) {}
